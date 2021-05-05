@@ -5,7 +5,7 @@
 + CSS
 + JavaScript
 
-### Feachures:
+### Features:
 + Animated menu nav with smooth scroll links
 + On scroll animations 
 + Form Validation
