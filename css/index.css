@@ -47,6 +47,7 @@ h1 {
   font-weight: 700;
   line-height: 30px;
   color: var(--root-yellow);
+  text-shadow: 0 1px 1px #000000;
 }
 h2 {
   font-family: "oswald", sans-serif;
@@ -59,6 +60,7 @@ h3 {
   font-size: 60px;
   font-weight: lighter;
   color: var(--root-gray);
+  text-shadow: 0 1px 1px #000000;
 }
 h4 {
   font-family: "oswald", sans-serif;
@@ -104,6 +106,7 @@ button.btn {
   cursor: pointer;
   position: relative;
   transition: all 0.5s ease;
+  box-shadow: 2px 2px 5px 0px #00000073;
 }
 /* KEYFRAMES */
 @-webkit-keyframes fade-in-left {
@@ -336,6 +339,7 @@ header {
   margin: 0 5px 10px 5px;
   visibility: hidden;
   opacity: 0;
+  box-shadow: -1px 20px 15px 0px #00000085;
 }
 .service-card h5 {
   margin: 10px 0;
@@ -349,6 +353,7 @@ header {
   height: 80px;
   align-self: center;
   border-radius: 50%;
+  box-shadow: inset 0 0 6px 0px #00000085;
 }
 .service-icono img {
   max-width: 70%;
@@ -399,6 +404,7 @@ header {
   transform: translateZ(3);
   transform: translate(60px, -80px);
   max-width: 100%;
+  box-shadow: 0 0 15px 0px #00000085;
 }
 .about-wrapper .text {
   width: 30%;
@@ -445,6 +451,7 @@ header {
   position: absolute;
   left: 5%;
   top: 20%;
+  box-shadow: 0 0 15px 0px #00000085;
 }
 .banner-wrapper h1 {
   color: var(--root-black);
@@ -579,7 +586,8 @@ header {
   line-height: 24px;
   padding: 30px 25px;
   width: 320px;
-  height: 300px;
+  height: max-content;
+  box-shadow: inset 1px 0px 10px 0px #00000047;
 }
 .contact-info h5 {
   color: var(--root-black);
