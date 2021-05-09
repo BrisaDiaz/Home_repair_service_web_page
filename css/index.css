@@ -319,6 +319,7 @@ header {
 }
 .sevices-wrapper {
   width: 90%;
+  margin-left: -6px;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -706,10 +707,7 @@ header {
     flex-grow: 1;
   }
   .principal div.content {
-    position: relative;
     padding: 50px 20px 20px 20px;
-
-    left: 20px;
   }
   .principal div.content h1 {
     font-family: "oswald", sans-serif;
@@ -804,5 +802,17 @@ header {
   .menu-wrapper ul li {
     margin: 20px 0;
     font-size: 25px;
+  }
+}
+@media screen and (max-width: 500px) {
+  section .principal div.content {
+    padding: 60px 15px 0 55px;
+  }
+  section .principal div.content h1 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+  section .principal div.content h3 {
+    font-size: 40px;
   }
 }
