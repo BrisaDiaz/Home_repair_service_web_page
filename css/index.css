@@ -32,6 +32,8 @@
 }
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  box-sizing: inherit;
 }
 body {
   box-sizing: inherit;
@@ -47,13 +49,12 @@ h1 {
   font-weight: 700;
   line-height: 30px;
   color: var(--root-yellow);
-  text-shadow: 0 1px 1px #000000;
+  text-shadow: -1px 1px 1px rgb(174 141 0);
 }
 h2 {
   font-family: "oswald", sans-serif;
   font-size: 72px;
   font-weight: lighter;
-  line-height: 70px;
 }
 h3 {
   font-family: "oswald", sans-serif;
@@ -104,9 +105,10 @@ button.btn {
   font-weight: 700;
   letter-spacing: 2px;
   cursor: pointer;
+  border-radius: 3px;
   position: relative;
   transition: all 0.5s ease;
-  box-shadow: 2px 2px 5px 0px #00000073;
+  box-shadow: 2px 2px 5px 0px #00000038;
 }
 /* KEYFRAMES */
 @-webkit-keyframes fade-in-left {
@@ -218,12 +220,14 @@ header {
   align-items: center;
   width: 90%;
   height: 100%;
+  display: flex;
   margin: 0 auto;
 }
 .menu-wrapper ul {
   display: flex;
   list-style: none;
 }
+
 .menu-wrapper ul li a {
   letter-spacing: 2px;
   text-decoration: none;
@@ -244,7 +248,7 @@ header {
 .menu-wrapper ul li a:before {
   content: "";
   position: absolute;
-  transition: all 0.3s ease-out;
+  transition: all 0.3s ease;
   left: 0;
   bottom: -5px;
   height: 3px;
@@ -272,6 +276,7 @@ header {
   max-width: 85vw;
   padding: 50px 0;
   margin: 0 auto;
+  min-height: calc(100vh - 80px);
 }
 .principal div {
   width: 50%;
@@ -339,7 +344,7 @@ header {
   margin: 0 5px 10px 5px;
   visibility: hidden;
   opacity: 0;
-  box-shadow: -1px 20px 15px 0px #00000085;
+  box-shadow: 2px 2px 5px 0px #00000038;
 }
 .service-card h5 {
   margin: 10px 0;
@@ -353,7 +358,7 @@ header {
   height: 80px;
   align-self: center;
   border-radius: 50%;
-  box-shadow: inset 0 0 6px 0px #00000085;
+  box-shadow: inset 0 0 6px 0px #00000030;
 }
 .service-icono img {
   max-width: 70%;
@@ -385,7 +390,7 @@ header {
   width: 90vw;
   height: 100%;
   margin: 0 auto;
-  padding: 30px;
+  padding: 30px 0;
   text-align: center;
   transform: translateZ(2px);
 }
@@ -404,7 +409,7 @@ header {
   transform: translateZ(3);
   transform: translate(60px, -80px);
   max-width: 100%;
-  box-shadow: 0 0 15px 0px #00000085;
+  box-shadow: 0 0 15px 0px #00000030;
 }
 .about-wrapper .text {
   width: 30%;
@@ -494,6 +499,7 @@ header {
   text-align: center;
   visibility: hidden;
   opacity: 0;
+  box-shadow: 2px 2px 5px 0px #00000038;
 }
 .popular-service img {
   max-width: 100%;
@@ -570,7 +576,7 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   min-height: 450px;
-  padding: 0 30px;
+  padding: 0 15px;
 }
 .contact-info,
 .contact-form-wrapper {
@@ -602,6 +608,8 @@ header {
   display: grid;
   justify-items: end;
   padding: 35px;
+
+  box-shadow: 2px 2px 5px 0px #00000038;
 }
 .contact-form-wrapper form {
   width: 70%;
@@ -612,15 +620,11 @@ header {
 .contact-form-wrapper form textarea {
   padding: 10px;
   margin-bottom: 10px;
-  border: none;
   border-bottom: 1px solid var(--root-black);
   font-family: "raleway", sans-serif;
   font-size: 16px;
 }
-.contact-form-wrapper form input:focus,
-.contact-form-wrapper form textarea:focus {
-  outline: none;
-}
+
 .contact-form-wrapper form button {
   align-self: center;
   border: 2px solid var(--root-black);
@@ -655,7 +659,10 @@ header {
   font-size: 1rem;
   font-family: "Roboto", sans-serif;
 }
-
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 1px solid var(--root-yellow);
+}
 .contact-form input[type="submit"] {
   width: 50%;
   font-weight: bold;
@@ -694,6 +701,9 @@ header {
 /* MEDIA QUERYS */
 
 @media screen and (max-width: 990px) {
+  .menu-wrapper ul {
+    margin: 40px 0;
+  }
   .contact-form-wrapper form {
     width: 100%;
   }
@@ -708,6 +718,10 @@ header {
   }
 }
 @media screen and (max-width: 945px) {
+  h2 {
+    font-size: 42px;
+    line-height: 40px;
+  }
   .principal div {
     max-width: 100%;
 
@@ -813,6 +827,9 @@ header {
   }
 }
 @media screen and (max-width: 500px) {
+  .menu-wrapper ul li a {
+    font-size: 20px;
+  }
   section .principal div.content {
     padding: 60px 15px 0 55px;
   }
@@ -822,5 +839,11 @@ header {
   }
   section .principal div.content h3 {
     font-size: 40px;
+  }
+  .populars {
+    width: 95%;
+  }
+  .repair-services .wrapper .text {
+    text-align: left;
   }
 }
